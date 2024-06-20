@@ -18,8 +18,8 @@
     </head>
     <body class="font-sans antialiased dark:bg-light dark:text-white/50">
         <div class="bg-gray-50 text-light/50 dark:bg-black light:text-white/50">
-            <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" />
-            <img id="background1" class="absolute -left-2000 top-0 max-w-[1000px]" src="https://github.com/User17job/GDP_API/blob/main/Images/Background.png?raw=true" />
+            <!-- <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" /> -->
+            <img id="background1" class="absolute -left-2000 top-0 max-w-[1000px]" src="https://github.com/User17job/GDP_API/blob/main/Images/fondo.png?raw=true"/>
 
             <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
                 <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
@@ -34,6 +34,7 @@
                     <footer class="py-16 text-center text-xl text-light ">
                         <H1>Api con laravel para el proyecto de GAlleryOfProjects</H1>
                         <h2>accede a "/api/trabajos"</h2>
+                        <a href="https://github.com/User17job/GDP_API/">GitHub</a>
 
 
                     </footer>
