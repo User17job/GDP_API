@@ -18,5 +18,6 @@ class Trabajos extends Model
         'link',
         'name',
         'description',
+        'by'
     ];
 }

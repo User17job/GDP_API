@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('imagen_url');
             $table->string('name');
             $table->string('description');
+            $table->string('by');
             $table->timestamps(); 
         });
     }

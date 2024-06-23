@@ -45,7 +45,8 @@ class trabajosController extends Controller
             'imagen_url'  => 'required|unique:trabajos',
             'link'        => 'required|unique:trabajos',
             'name'        => 'required|string|max:35|unique:trabajos',
-            'description' => 'required'
+            'description' => 'required',
+            'by' => 'required'
         ]);
         if($validator->fails()){
             $data = [
@@ -64,6 +65,7 @@ class trabajosController extends Controller
             'imagen_url'  => $request->imagen_url,
             'name'        => $request->name,
             'description' => $request->description,
+            'by' => $request->by
         ]);
         #confirmar que el trabajo se a creado
         if(!$trabajos){
@@ -89,7 +91,8 @@ class trabajosController extends Controller
             'imagen_url'  => 'required',
             'link'        => 'required',
             'name'        => 'required|string|max:35',
-            'description' => 'required'
+            'description' => 'required',
+            'by' => 'required'
         ]);
         if($validator->fails()){
             $data = [
@@ -106,6 +109,7 @@ class trabajosController extends Controller
         $trabajos->link        = $request->link;
         $trabajos->name        = $request->name;
         $trabajos->description = $request->description;
+        $trabajos->by = $request->by;
         $trabajos->save();
         $data = [
             'message' => 'Trabajo actualizado correctamente',
@@ -128,7 +132,8 @@ class trabajosController extends Controller
             'imagen_url'  => 'min:3',
             'link'        => 'min:3',
             'name'        => 'min:3|string|max:35',
-            'description' => 'min:3'
+            'description' => 'min:3',
+            'by' => 'min:3'
         ]);  
         if($validator->fails()){
             $data = [
@@ -159,6 +164,9 @@ class trabajosController extends Controller
         }
         if($request->has('description')){
             $trabajos->description = $request->description;
+        }
+        if($request->has('by')){
+            $trabajos->by = $request->by;
         }
         $trabajos->save();
 
